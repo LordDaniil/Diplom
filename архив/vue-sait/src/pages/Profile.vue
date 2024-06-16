@@ -5,7 +5,7 @@
     лицензионного ПО 1С, технической поддержке, предоставлении комплексных решений автоматизации
     бизнеса.
   </p>
-  <img class="pt-12 pb-12" src="C:\product\2870.jpg" alt="1С" />
+  <img class="pt-12 pb-12" src="/product/2870.jpg" alt="1С" />
   <p class="pt-4 text-lg">
     Компания "Аркис" - партнер фирмы "1С", входящий в ТОП-30 фирм-франчайзи Краснодара.
   </p>
@@ -25,14 +25,7 @@
   </p>
   <div class="flex flex-nowrap">
     <div>
-      <img
-        class="pt-12 pb-12"
-        src="C:\product\1674518303_catherineasquithgallery-com-p-fon-dlya-reklami-salona-krasoti-12.png"
-        alt="Салон красоты"
-      />
-    </div>
-    <div>
-      <img class="pt-12 pb-12" src="C:\product\Gazprom_Logo_rus.svg (1).png" alt="Газпром" />
+      <img class="pt-12 pb-12" src="/product/Gazprom_Logo_rus.svg (1).png" alt="Газпром" />
     </div>
   </div>
   <p class="pt-4 text-lg">
