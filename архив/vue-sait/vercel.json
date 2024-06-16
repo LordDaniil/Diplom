@@ -4,7 +4,7 @@
 
 {
   "scripts": {
-    "build": "next build",
-    "start": "next start"
+    "build": "vite build",
+    "start": "vite start"
   }
 }
