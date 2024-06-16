@@ -1,10 +1,23 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
-}
-
-{
   "scripts": {
     "build": "vite build",
     "start": "vite start"
-  }
+  },
+  "version": 2,
+  "builds": [
+    {
+      "src": "vite.config.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
 }
