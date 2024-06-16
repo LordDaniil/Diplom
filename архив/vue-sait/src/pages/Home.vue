@@ -119,27 +119,29 @@ watch(filters, fetchItems)
 </script>
 
 <template>
-  <div class="flex justify-between items-center">
-    <h2 class="text-3xl font-bold mb-8">Комплексное обсуживание 1С</h2>
+  <div>
+    <div class="flex justify-between items-center">
+      <h2 class="text-3xl font-bold mb-8">Комплексное обсуживание 1С</h2>
 
-    <div class="flex gap-4">
-      <select @change="onChangeSelect" class="py-2 px-3 border rounded-md outline-none">
-        <option value="name">Стандартно</option>
-        <option value="price">Более дешевое</option>
-        <option value="-price">Более дорогое</option>
-      </select>
+      <div class="flex gap-4">
+        <select @change="onChangeSelect" class="py-2 px-3 border rounded-md outline-none">
+          <option value="name">Стандартно</option>
+          <option value="price">Более дешевое</option>
+          <option value="-price">Более дорогое</option>
+        </select>
 
-      <div class="relative">
-        <img class="absolute left-4 top-3" src="/search.svg" />
-        <input
-          @input="onChangeSearchInput"
-          class="border rounded-md py-2 pl-11 pr-4 outline-none focus:border-gray-400"
-          placeholder="Поиск..."
-        />
+        <div class="relative">
+          <img class="absolute left-4 top-3" src="/search.svg" />
+          <input
+            @input="onChangeSearchInput"
+            class="border rounded-md py-2 pl-11 pr-4 outline-none focus:border-gray-400"
+            placeholder="Поиск..."
+          />
+        </div>
       </div>
     </div>
-  </div>
-  <div class="mt-10">
-    <Cardlist :items="items" @add-to-favorite="addToFavorite" @add-to-cart="onClickAddPlus" />
+    <div class="mt-10">
+      <Cardlist :items="items" @add-to-favorite="addToFavorite" @add-to-cart="onClickAddPlus" />
+    </div>
   </div>
 </template>
