@@ -93,69 +93,71 @@ const isValidEmail = computed(() => {
 </script>
 
 <template>
-  <div class="fixed top-0 left-0 h-full w-full bg-black z-10 opacity-80"></div>
-  <div class="bg-white w-1/3 h-full fixed left-0 top-0 z-20 p-8">
-    <DrawerHead />
-    <Login />
-    <div v-if="!totalPrice || orderId" class="flex h-full items-center">
-      <infoBlock
-        v-if="!totalPrice && !orderId"
-        title="Корзина пустая"
-        description="Добавьте хотя бы одну услугу, чтобы сделать заказ"
-        image-url="/package-icon.png"
-      />
+  <div>
+    <div class="fixed top-0 left-0 h-full w-full bg-black z-10 opacity-80"></div>
+    <div class="bg-white w-1/3 h-full fixed left-0 top-0 z-20 p-8">
+      <DrawerHead />
+      <Login />
+      <div v-if="!totalPrice || orderId" class="flex h-full items-center">
+        <infoBlock
+          v-if="!totalPrice && !orderId"
+          title="Корзина пустая"
+          description="Добавьте хотя бы одну услугу, чтобы сделать заказ"
+          image-url="/package-icon.png"
+        />
 
-      <infoBlock
-        v-if="orderId"
-        title="Заказ оформлен"
-        :description="`Ваш заказ (#${orderId}) оформлен`"
-        image-url="/order-success-icon.png"
-      />
-    </div>
-
-    <div action="send.php" method="post" v-else class="h-full p-10 overflow-y-auto">
-      <CartItemlist />
-
-      <div class="flex flex-col gap-4 mt-7">
-        <div class="flex gap-2">
-          <span>Итого:</span>
-          <div class="flex-1 border-b border-dashed"></div>
-          <b>{{ totalPrice }} руб</b>
-        </div>
-
-        <div v-if="!isCreatingOrder" action="" method="">
-          <input
-            type="text"
-            name="FIO"
-            v-model="customerName1"
-            placeholder="Имя получателя"
-            class="input-field w-64"
-          />
-          <input
-            type="tel"
-            name="tel"
-            v-model="customerNumber1"
-            placeholder="Ваш телефон"
-            class="input-field w-64"
-          />
-
-          <input
-            type="email"
-            name="email"
-            v-model="customerNumber2"
-            placeholder="Ваша почта"
-            class="input-field w-64"
-          />
-        </div>
+        <infoBlock
+          v-if="orderId"
+          title="Заказ оформлен"
+          :description="`Ваш заказ (#${orderId}) оформлен`"
+          image-url="/order-success-icon.png"
+        />
       </div>
 
-      <button
-        :disabled="!canPlaceOrder"
-        @click="createOrderIfFormFilled()"
-        class="mt-4 transition bg-lime-500 w-full rounded-xl py-3 text-white disabled: bg-slate-300 hover:bg-lime-600 active:bg-lime-700 cursor-pointer"
-      >
-        Оформить заказ
-      </button>
+      <div action="send.php" method="post" v-else class="h-full p-10 overflow-y-auto">
+        <CartItemlist />
+
+        <div class="flex flex-col gap-4 mt-7">
+          <div class="flex gap-2">
+            <span>Итого:</span>
+            <div class="flex-1 border-b border-dashed"></div>
+            <b>{{ totalPrice }} руб</b>
+          </div>
+
+          <div v-if="!isCreatingOrder" action="" method="">
+            <input
+              type="text"
+              name="FIO"
+              v-model="customerName1"
+              placeholder="Имя получателя"
+              class="input-field w-64"
+            />
+            <input
+              type="tel"
+              name="tel"
+              v-model="customerNumber1"
+              placeholder="Ваш телефон"
+              class="input-field w-64"
+            />
+
+            <input
+              type="email"
+              name="email"
+              v-model="customerNumber2"
+              placeholder="Ваша почта"
+              class="input-field w-64"
+            />
+          </div>
+        </div>
+
+        <button
+          :disabled="!canPlaceOrder"
+          @click="createOrderIfFormFilled()"
+          class="mt-4 transition bg-lime-500 w-full rounded-xl py-3 text-white disabled: bg-slate-300 hover:bg-lime-600 active:bg-lime-700 cursor-pointer"
+        >
+          Оформить заказ
+        </button>
+      </div>
     </div>
   </div>
 </template>

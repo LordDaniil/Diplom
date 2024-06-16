@@ -31,13 +31,13 @@ const emit = defineEmits(['openDrawer'])
           @click="() => emit('openDrawer')"
           class="flex items-center cursor-pointer text-grey-500 hover:text-black pb-3"
         >
-          <img src="/public/cart.svg" alt="Cart" class="w-px-20 h-px-20" />
+          <img src="/cart.svg" alt="Cart" class="w-px-20 h-px-20" />
           <span class="text-xl px-2">Корзина</span>
         </li>
 
         <router-link to="/favorites">
           <li class="flex items-center cursor-pointer text-grey-500 hover:text-black">
-            <img src="/public/heart.svg" alt="Cart" class="w-5 h-5" />
+            <img src="/heart.svg" alt="Cart" class="w-5 h-5" />
             <span class="text-xl px-2">Избранное</span>
           </li>
         </router-link>
@@ -47,7 +47,7 @@ const emit = defineEmits(['openDrawer'])
       <ul class="frex items-center pt-8">
         <router-link to="/profile">
           <li class="flex items-center cursor-pointer text-grey-500 hover:text-black pb-3">
-            <img src="/public/profile.svg" alt="Cart" class="w-5 h-5" />
+            <img src="/profile.svg" alt="Cart" class="w-5 h-5" />
             <span class="text-xl px-2">О нас</span>
           </li>
         </router-link>
@@ -55,7 +55,7 @@ const emit = defineEmits(['openDrawer'])
         <router-link to="/conf">
           <li class="flex items-center cursor-pointer text-grey-500 hover:text-black">
             <img
-              src="/product/password_protect_secure_security_privacy_lock_padlock_icon_219328.svg"
+              src="/password_protect_secure_security_privacy_lock_padlock_icon_219328.svg"
               alt="confi"
               class="w-5 h-5"
             />
