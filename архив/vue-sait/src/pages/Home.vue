@@ -120,10 +120,10 @@ watch(filters, fetchItems)
 
 <template>
   <div>
-    <div class="flex justify-between items-center">
+    <div class="header-container flex justify-between items-center flex-wrap gap-4">
       <h2 class="text-3xl font-bold mb-8">Комплексное обсуживание 1С</h2>
 
-      <div class="flex gap-4">
+      <div class="flex gap-4 items-center flex-wrap">
         <select @change="onChangeSelect" class="py-2 px-3 border rounded-md outline-none">
           <option value="name">Стандартно</option>
           <option value="price">Более дешевое</option>
@@ -145,3 +145,46 @@ watch(filters, fetchItems)
     </div>
   </div>
 </template>
+
+<style scoped>
+.header-container {
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-container h2 {
+  margin-bottom: 0;
+}
+
+.header-container select,
+.header-container .relative {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-container h2 {
+    margin-bottom: 16px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .header-container select,
+  .header-container .relative {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .header-container .relative input {
+    width: calc(100% - 2rem);
+  }
+
+  .header-container .relative img {
+    left: 1rem;
+  }
+}
+</style>

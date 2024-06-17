@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-3xl font-bold mb-8">О нашей компании</h1>
+    <h1 class="text-3xl font-bold mb-8 profi-container">О нашей компании</h1>
     <p class="pt-4 text-lg">
       Компания "Аркис" специализируется на оказании профессиональных ИТ-услуг: подборе и поставке
       лицензионного ПО 1С, технической поддержке, предоставлении комплексных решений автоматизации
@@ -35,3 +35,14 @@
     </p>
   </div>
 </template>
+
+<style scoped>
+@media (max-width: 640px) {
+  .profi-container {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+</style>

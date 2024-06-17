@@ -13,25 +13,25 @@ defineProps({
 </script>
 <template>
   <div
-    class="relative bg-white border border-slate-300 rounded-3xl p-8 cursor-pointer transition hover:-translate-y-2 hover:shadow-2xl"
+    class="relative bg-white border border-slate-300 rounded-3xl p-4 sm:p-6 md:p-8 cursor-pointer transition hover:-translate-y-2 hover:shadow-2xl"
   >
     <img
       v-if="onClickFavorite"
       @click="onClickFavorite"
       :src="isFavorite ? '/like-1.svg' : '/like-2.svg'"
       alt="like 1"
-      class="absolute top-8 left-8"
+      class="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-8"
     />
 
-    <img :src="imageUrl" alt="Услуга" />
+    <img :src="imageUrl" alt="Услуга" class="w-full h-auto" />
 
-    <p class="mt-2 text-lg pt-6 pb-6">{{ title }}</p>
-    <b class="text-state-400">Описание:</b>
+    <p class="mt-2 text-base sm:text-lg pt-4 pb-4 sm:pt-6 sm:pb-6">{{ title }}</p>
+    <b class="text-slate-400">Описание:</b>
 
-    <p class="overflow-y-auto max-h-64">{{ text }}</p>
+    <p class="overflow-y-auto max-h-32 sm:max-h-48 md:max-h-64">{{ text }}</p>
     <div class="flex justify-between mt-3">
       <div class="flex flex-col">
-        <span class="text-state-400">Цена:</span>
+        <span class="text-slate-400">Цена:</span>
         <b>{{ price }} руб.</b>
       </div>
 
@@ -40,6 +40,7 @@ defineProps({
         @click="onClickAdd"
         :src="!isAdded ? '/plus.svg' : '/checked.svg'"
         alt="Plus"
+        class="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10"
       />
     </div>
   </div>

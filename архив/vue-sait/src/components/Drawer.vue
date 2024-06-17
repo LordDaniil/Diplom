@@ -95,7 +95,7 @@ const isValidEmail = computed(() => {
 <template>
   <div>
     <div class="fixed top-0 left-0 h-full w-full bg-black z-10 opacity-80"></div>
-    <div class="bg-white w-1/3 h-full fixed left-0 top-0 z-20 p-8">
+    <div class="bg-white w-w h-full fixed left-0 top-0 z-20 p-4 sm:p-6 md:p-8 overflow-y-auto">
       <DrawerHead />
       <Login />
       <div v-if="!totalPrice || orderId" class="flex h-full items-center">
@@ -114,7 +114,7 @@ const isValidEmail = computed(() => {
         />
       </div>
 
-      <div action="send.php" method="post" v-else class="h-full p-10 overflow-y-auto">
+      <div v-else class="h-full p-4 sm:p-6 md:p-10">
         <CartItemlist />
 
         <div class="flex flex-col gap-4 mt-7">
@@ -124,28 +124,27 @@ const isValidEmail = computed(() => {
             <b>{{ totalPrice }} руб</b>
           </div>
 
-          <div v-if="!isCreatingOrder" action="" method="">
+          <div v-if="!isCreatingOrder" class="flex flex-col gap-4">
             <input
               type="text"
               name="FIO"
               v-model="customerName1"
               placeholder="Имя получателя"
-              class="input-field w-64"
+              class="input-field w-full sm:w-64"
             />
             <input
               type="tel"
               name="tel"
               v-model="customerNumber1"
               placeholder="Ваш телефон"
-              class="input-field w-64"
+              class="input-field w-full sm:w-64"
             />
-
             <input
               type="email"
               name="email"
               v-model="customerNumber2"
               placeholder="Ваша почта"
-              class="input-field w-64"
+              class="input-field w-full sm:w-64"
             />
           </div>
         </div>
@@ -153,7 +152,7 @@ const isValidEmail = computed(() => {
         <button
           :disabled="!canPlaceOrder"
           @click="createOrderIfFormFilled()"
-          class="mt-4 transition bg-lime-500 w-full rounded-xl py-3 text-white disabled: bg-slate-300 hover:bg-lime-600 active:bg-lime-700 cursor-pointer"
+          class="mt-4 transition bg-lime-500 w-full rounded-xl py-3 text-white disabled:bg-slate-300 hover:bg-lime-600 active:bg-lime-700 cursor-pointer"
         >
           Оформить заказ
         </button>
@@ -161,3 +160,26 @@ const isValidEmail = computed(() => {
     </div>
   </div>
 </template>
+
+<style scoped>
+@media (min-width: 1340px) {
+  .w-w {
+    width: 35%;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1339px) {
+  .w-w {
+    width: 35%;
+  }
+}
+@media (min-width: 1035px) and (max-width: 1280px) {
+  .w-w {
+    width: 40%;
+  }
+}
+@media (min-width: 1023px) and (max-width: 1035px) {
+  .w-w {
+    width: 50%;
+  }
+}
+</style>

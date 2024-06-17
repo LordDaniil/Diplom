@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-3xl font-bold mb-8">Политика конфиденциальности</h1>
+    <h1 class="text-3xl font-bold mb-8 confi-container">Политика конфиденциальности</h1>
     <p class="text-lg">
       Администрация сайта с уважением относится к правам наших посетителей. Мы безоговорочно
       признаем важность конфиденциальности личной информации посетителей нашего сайта. Данная
@@ -92,3 +92,14 @@
     <p class="text-lg">+7 (995) 208-44-74 и +7 (861) 217-58-11</p>
   </div>
 </template>
+
+<style scoped>
+@media (max-width: 640px) {
+  .confi-container {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+</style>
