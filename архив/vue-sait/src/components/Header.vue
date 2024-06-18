@@ -82,7 +82,7 @@ const emit = defineEmits(['openDrawer'])
 }
 
 .text-xl {
-  font-size: 1.5rem; /* Основной размер текста */
+  font-size: 1.2rem; /* Основной размер текста */
 }
 .cart-container {
   display: flex;
