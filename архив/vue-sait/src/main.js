@@ -10,6 +10,7 @@ import Profile from './pages/Profile.vue'
 import Conf from './pages/Conf.vue'
 import Rabota from './pages/Rabota.vue'
 import Vacansii from './pages/Vacansii.vue'
+import NotFound from './components/NotFound.vue'
 
 const app = createApp(App)
 
@@ -19,22 +20,14 @@ const routes = [
   { path: '/profile', name: 'Profile', component: Profile },
   { path: '/conf', name: 'Conf', component: Conf },
   { path: '/rabota', name: 'Rabota', component: Rabota },
-  { path: '/vacansii', name: 'Vacansii', component: Vacansii }
+  { path: '/vacansii', name: 'Vacansii', component: Vacansii },
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
 ]
 
 const router = createRouter({
   history: createWebHistory(),
   routes
 })
-
-function App() {
-  return (
-    <div class="App">
-      <h1>This is a template desploy</h1>
-    </div>
-  )
-}
-export default App
 
 app.use(router)
 app.use(autoAnimatePlugin)
