@@ -9,13 +9,13 @@
     </div>
     <img height="100" width="250" src="/trace.svg" alt="1C" class="footer-logo" />
     <div class="footer-right">
-      <a href="https://api.whatsapp.com/send?phone=89054012969" target="_blank">
+      <a href="https://api.whatsapp.com/send?phone=+79064347021" target="_blank">
         <img height="50" width="50" src="/whatsapp-whats-app-svgrepo-com.svg" alt="whatsapp" />
       </a>
-      <a href="https://t.me/JackP1888" target="_blank" rel="noopener noreferrer">
+      <a href="https://t.me/+79064347021" target="_blank" rel="noopener noreferrer">
         <img height="50" width="50" src="/telegram-svgrepo-com.svg" alt="Telegram" />
       </a>
-      <a href="https://vk.com/prostoghora" target="_blank" rel="noopener noreferrer">
+      <a href="https://vk.com/id421064756" target="_blank" rel="noopener noreferrer">
         <img src="/vk-1-logo-svgrepo-com.svg" alt="ВКонтакте" height="50" width="50" />
       </a>
     </div>
