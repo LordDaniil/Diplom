@@ -27,6 +27,15 @@ const router = createRouter({
   routes
 })
 
+function App() {
+  return (
+    <div class="App">
+      <h1>This is a template desploy</h1>
+    </div>
+  )
+}
+export default App
+
 app.use(router)
 app.use(autoAnimatePlugin)
 
