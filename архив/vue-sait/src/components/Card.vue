@@ -25,7 +25,7 @@ defineProps({
 
     <img :src="imageUrl" alt="Услуга" class="w-full h-auto" />
 
-    <p class="mt-2 text-base sm:text-lg pt-4 pb-4 sm:pt-6 sm:pb-6">{{ title }}</p>
+    <p class="mt-2 text-base sm:text-lg h-10 pt-4 pb-4 sm:pt-6 sm:pb-6">{{ title }}</p>
     <b class="text-slate-400">Описание:</b>
 
     <p class="overflow-y-auto max-h-32 sm:max-h-48 md:max-h-64">{{ text }}</p>
