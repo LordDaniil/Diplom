@@ -23,9 +23,9 @@ defineProps({
       class="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-8"
     />
 
-    <img :src="imageUrl" alt="Услуга" class="w-full h-auto" />
+    <img :src="imageUrl" alt="Услуга" class="w-full max-h" />
 
-    <p class="mt-2 text-base sm:text-lg pt-4 pb-4 sm:pt-6 sm:pb-6">{{ title }}</p>
+    <p class="mt-2 text-base sm:text-lg w-full h-h">{{ title }}</p>
     <b class="text-slate-400">Описание:</b>
 
     <p class="overflow-y-auto max-h-32 sm:max-h-48 md:max-h-64">{{ text }}</p>
@@ -45,3 +45,9 @@ defineProps({
     </div>
   </div>
 </template>
+
+<style scoped>
+.h-h {
+  height: 10%;
+}
+</style>
