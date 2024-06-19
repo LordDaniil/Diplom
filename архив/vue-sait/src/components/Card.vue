@@ -45,9 +45,3 @@ defineProps({
     </div>
   </div>
 </template>
-
-<style scoped>
-.h-h {
-  height: 10%;
-}
-</style>
